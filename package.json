@@ -1,0 +1,14 @@
+{
+  "name": "lcd-numbers-js",
+  "version": "0.0.1",
+  "description": "LCD Numbers Kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  }
+}
