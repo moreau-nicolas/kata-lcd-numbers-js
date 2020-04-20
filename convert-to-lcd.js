@@ -65,17 +65,22 @@ function lcdDigits(number, scale) {
 }
 
 function scaledLcdDigit(decimalDigit, {width, height}) {
-    const lcdDigit = LCD_DIGITS[decimalDigit];
+    const EMPTY = ' ';
+    const [
+        [TOP_LEFT, TOP, TOP_RIGHT],
+        [CENTER_LEFT, CENTER, CENTER_RIGHT],
+        [BOTTOM_LEFT, BOTTOM, BOTTOM_RIGHT],
+    ] = LCD_DIGITS[decimalDigit];
     return [
-        lcdDigit[0][0] + lcdDigit[0][1].repeat(width) + lcdDigit[0][2],
+        TOP_LEFT + TOP.repeat(width) + TOP_RIGHT,
         ...copy(height - 1,
-            lcdDigit[1][0] + ' '.repeat(width) + lcdDigit[1][2],
+            CENTER_LEFT + EMPTY.repeat(width) + CENTER_RIGHT,
         ),
-        lcdDigit[1][0] + lcdDigit[1][1].repeat(width) + lcdDigit[1][2],
+        CENTER_LEFT + CENTER.repeat(width) + CENTER_RIGHT,
         ...copy(height - 1,
-            lcdDigit[2][0] + ' '.repeat(width) + lcdDigit[2][2],
+            BOTTOM_LEFT + EMPTY.repeat(width) + BOTTOM_RIGHT,
         ),
-        lcdDigit[2][0] + lcdDigit[2][1].repeat(width) + lcdDigit[2][2],
+        BOTTOM_LEFT + BOTTOM.repeat(width) + BOTTOM_RIGHT,
     ];
 }
 
