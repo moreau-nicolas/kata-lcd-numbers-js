@@ -67,114 +67,114 @@ const LCD_DIGITS = [
 ];
 
 const ZERO_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    ZERO[0][0] +    ZERO[0][1].repeat(3) +    ZERO[0][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    ' '.repeat(3) +    '|',
+    ZERO[1][0] +    ZERO[1][1].repeat(3) +    ZERO[1][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    '_'.repeat(3) +    '|',
+    ZERO[2][0] +    ZERO[2][1].repeat(3) +    ZERO[2][2],
 ];
 const ONE_WIDTH_3_HEIGHT_2 = [
-    ' ' +    ' '.repeat(3) +    ' ',
+    ONE[0][0] +    ONE[0][1].repeat(3) +    ONE[0][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    ' '.repeat(3) +    '|',
+    ONE[1][0] +    ONE[1][1].repeat(3) +    ONE[1][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    ' '.repeat(3) +    '|',
+    ONE[2][0] +    ONE[2][1].repeat(3) +    ONE[2][2],
 ];
 const TWO_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    TWO[0][0] +    TWO[0][1].repeat(3) +    TWO[0][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    '_'.repeat(3) +    '|',
+    TWO[1][0] +    TWO[1][1].repeat(3) +    TWO[1][2],
 
     '|' +    ' '.repeat(3) +    ' ',
 
-    '|' +    '_'.repeat(3) +    ' ',
+    TWO[2][0] +    TWO[2][1].repeat(3) +    TWO[2][2],
 ];
 const THREE_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    THREE[0][0] +    THREE[0][1].repeat(3) +    THREE[0][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    '_'.repeat(3) +    '|',
+    THREE[1][0] +    THREE[1][1].repeat(3) +    THREE[1][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    '_'.repeat(3) +    '|',
+    THREE[2][0] +    THREE[2][1].repeat(3) +    THREE[2][2],
 ];
 const FOUR_WIDTH_3_HEIGHT_2 = [
-    ' ' +    ' '.repeat(3) +    ' ',
+    FOUR[0][0] +    FOUR[0][1].repeat(3) +    FOUR[0][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    '_'.repeat(3) +    '|',
+    FOUR[1][0] +    FOUR[1][1].repeat(3) +    FOUR[1][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    ' '.repeat(3) +    '|',
+    FOUR[2][0] +    FOUR[2][1].repeat(3) +    FOUR[2][2],
 ];
 const FIVE_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    FIVE[0][0] +    FIVE[0][1].repeat(3) +    FIVE[0][2],
 
     '|' +    ' '.repeat(3) +    ' ',
 
-    '|' +    '_'.repeat(3) +    ' ',
+    FIVE[1][0] +    FIVE[1][1].repeat(3) +    FIVE[1][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    '_'.repeat(3) +    '|',
+    FIVE[2][0] +    FIVE[2][1].repeat(3) +    FIVE[2][2],
 ];
 const SIX_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    SIX[0][0] +    SIX[0][1].repeat(3) +    SIX[0][2],
 
     '|' +    ' '.repeat(3) +    ' ',
 
-    '|' +    '_'.repeat(3) +    ' ',
+    SIX[1][0] +    SIX[1][1].repeat(3) +    SIX[1][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    '_'.repeat(3) +    '|',
+    SIX[2][0] +    SIX[2][1].repeat(3) +    SIX[2][2],
 ];
 const SEVEN_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    SEVEN[0][0] +    SEVEN[0][1].repeat(3) +    SEVEN[0][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    ' '.repeat(3) +    '|',
+    SEVEN[1][0] +    SEVEN[1][1].repeat(3) +    SEVEN[1][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    ' '.repeat(3) +    '|',
+    SEVEN[2][0] +    SEVEN[2][1].repeat(3) +    SEVEN[2][2],
 ];
 const EIGHT_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    EIGHT[0][0] +    EIGHT[0][1].repeat(3) +    EIGHT[0][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    '_'.repeat(3) +    '|',
+    EIGHT[1][0] +    EIGHT[1][1].repeat(3) +    EIGHT[1][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    '_'.repeat(3) +    '|',
+    EIGHT[2][0] +    EIGHT[2][1].repeat(3) +    EIGHT[2][2],
 ];
 const NINE_WIDTH_3_HEIGHT_2 = [
-    ' ' +    '_'.repeat(3) +    ' ',
+    NINE[0][0] +    NINE[0][1].repeat(3) +    NINE[0][2],
 
     '|' +    ' '.repeat(3) +    '|',
 
-    '|' +    '_'.repeat(3) +    '|',
+    NINE[1][0] +    NINE[1][1].repeat(3) +    NINE[1][2],
 
     ' ' +    ' '.repeat(3) +    '|',
 
-    ' ' +    '_'.repeat(3) +    '|',
+    NINE[2][0] +    NINE[2][1].repeat(3) +    NINE[2][2],
 ];
 const LCD_DIGITS_WIDTH_3_HEIGHT_2 = [
     ZERO_WIDTH_3_HEIGHT_2,
@@ -190,134 +190,134 @@ const LCD_DIGITS_WIDTH_3_HEIGHT_2 = [
 ];
 
 const ZERO_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    ZERO[0][0] +    ZERO[0][1].repeat(4) +    ZERO[0][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    ' '.repeat(4) +    '|',
+    ZERO[1][0] +    ZERO[1][1].repeat(4) +    ZERO[1][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    '_'.repeat(4) +    '|',
+    ZERO[2][0] +    ZERO[2][1].repeat(4) +    ZERO[2][2],
 ];
 const ONE_WIDTH_4_HEIGHT_3 = [
-    ' ' +    ' '.repeat(4) +    ' ',
+    ONE[0][0] +    ONE[0][1].repeat(4) +    ONE[0][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    ' '.repeat(4) +    '|',
+    ONE[1][0] +    ONE[1][1].repeat(4) +    ONE[1][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    ' '.repeat(4) +    '|',
+    ONE[2][0] +    ONE[2][1].repeat(4) +    ONE[2][2],
 ];
 const TWO_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    TWO[0][0] +    TWO[0][1].repeat(4) +    TWO[0][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    '_'.repeat(4) +    '|',
+    TWO[1][0] +    TWO[1][1].repeat(4) +    TWO[1][2],
 
     '|' +    ' '.repeat(4) +    ' ',
     '|' +    ' '.repeat(4) +    ' ',
 
-    '|' +    '_'.repeat(4) +    ' ',
+    TWO[2][0] +    TWO[2][1].repeat(4) +    TWO[2][2],
 ];
 const THREE_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    THREE[0][0] +    THREE[0][1].repeat(4) +    THREE[0][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    '_'.repeat(4) +    '|',
+    THREE[1][0] +    THREE[1][1].repeat(4) +    THREE[1][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    '_'.repeat(4) +    '|',
+    THREE[2][0] +    THREE[2][1].repeat(4) +    THREE[2][2],
 ];
 const FOUR_WIDTH_4_HEIGHT_3 = [
-    ' ' +    ' '.repeat(4) +    ' ',
+    FOUR[0][0] +    FOUR[0][1].repeat(4) +    FOUR[0][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    '_'.repeat(4) +    '|',
+    FOUR[1][0] +    FOUR[1][1].repeat(4) +    FOUR[1][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    ' '.repeat(4) +    '|',
+    FOUR[2][0] +    FOUR[2][1].repeat(4) +    FOUR[2][2],
 ];
 const FIVE_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    FIVE[0][0] +    FIVE[0][1].repeat(4) +    FIVE[0][2],
 
     '|' +    ' '.repeat(4) +    ' ',
     '|' +    ' '.repeat(4) +    ' ',
 
-    '|' +    '_'.repeat(4) +    ' ',
+    FIVE[1][0] +    FIVE[1][1].repeat(4) +    FIVE[1][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    '_'.repeat(4) +    '|',
+    FIVE[2][0] +    FIVE[2][1].repeat(4) +    FIVE[2][2],
 ];
 const SIX_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    SIX[0][0] +    SIX[0][1].repeat(4) +    SIX[0][2],
 
     '|' +    ' '.repeat(4) +    ' ',
     '|' +    ' '.repeat(4) +    ' ',
 
-    '|' +    '_'.repeat(4) +    ' ',
+    SIX[1][0] +    SIX[1][1].repeat(4) +    SIX[1][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    '_'.repeat(4) +    '|',
+    SIX[2][0] +    SIX[2][1].repeat(4) +    SIX[2][2],
 ];
 const SEVEN_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    SEVEN[0][0] +    SEVEN[0][1].repeat(4) +    SEVEN[0][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    ' '.repeat(4) +    '|',
+    SEVEN[1][0] +    SEVEN[1][1].repeat(4) +    SEVEN[1][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    ' '.repeat(4) +    '|',
+    SEVEN[2][0] +    SEVEN[2][1].repeat(4) +    SEVEN[2][2],
 ];
 const EIGHT_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    EIGHT[0][0] +    EIGHT[0][1].repeat(4) +    EIGHT[0][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    '_'.repeat(4) +    '|',
+    EIGHT[1][0] +    EIGHT[1][1].repeat(4) +    EIGHT[1][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    '_'.repeat(4) +    '|',
+    EIGHT[2][0] +    EIGHT[2][1].repeat(4) +    EIGHT[2][2],
 ];
 const NINE_WIDTH_4_HEIGHT_3 = [
-    ' ' +    '_'.repeat(4) +    ' ',
+    NINE[0][0] +    NINE[0][1].repeat(4) +    NINE[0][2],
 
     '|' +    ' '.repeat(4) +    '|',
     '|' +    ' '.repeat(4) +    '|',
 
-    '|' +    '_'.repeat(4) +    '|',
+    NINE[1][0] +    NINE[1][1].repeat(4) +    NINE[1][2],
 
     ' ' +    ' '.repeat(4) +    '|',
     ' ' +    ' '.repeat(4) +    '|',
 
-    ' ' +    '_'.repeat(4) +    '|',
+    NINE[2][0] +    NINE[2][1].repeat(4) +    NINE[2][2],
 ];
 const LCD_DIGITS_WIDTH_4_HEIGHT_3 = [
     ZERO_WIDTH_4_HEIGHT_3,
