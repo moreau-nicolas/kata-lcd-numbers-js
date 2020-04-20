@@ -1,10 +1,10 @@
 function convertToLcd(number, scale = {width: 1, height: 1}) {
     const decimalDigits = String(number).split('').map(Number);
-    const lcdDigits = decimalDigits.map(decimalDigit => lcdDigit(decimalDigit, scale));
+    const lcdDigits = decimalDigits.map(lcdDigit(scale));
     return lcdNumber(lcdDigits);
 }
 
-function lcdDigit(decimalDigit, {width, height}) {
+const lcdDigit = ({width, height}) => (decimalDigit) => {
     const EMPTY = ' ';
     const [
         [TOP_LEFT, TOP, TOP_RIGHT],
@@ -22,7 +22,7 @@ function lcdDigit(decimalDigit, {width, height}) {
         ),
         BOTTOM_LEFT + BOTTOM.repeat(width) + BOTTOM_RIGHT,
     ];
-}
+};
 
 const LCD_DIGITS = transpose([
     [' _ ', '   ', ' _ ', ' _ ', '   ', ' _ ', ' _ ', ' _ ', ' _ ', ' _ '],
