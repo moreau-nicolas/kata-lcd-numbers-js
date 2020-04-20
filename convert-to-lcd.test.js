@@ -130,10 +130,19 @@ describe("Convert to LCD", () => {
             '    | ___| ___||___||___ |___     ||___||___||   |\n' +
             '    ||        |    |    ||   |    ||   |    ||   |\n' +
             '    ||___  ___|    | ___||___|    ||___| ___||___|\n';
+        const LCD_1234567890_WIDTH_4_HEIGHT_3 = '' +
+            '       ____  ____        ____  ____  ____  ____  ____  ____ \n' +
+            '     |     |     ||    ||     |          ||    ||    ||    |\n' +
+            '     |     |     ||    ||     |          ||    ||    ||    |\n' +
+            '     | ____| ____||____||____ |____      ||____||____||    |\n' +
+            '     ||          |     |     ||    |     ||    |     ||    |\n' +
+            '     ||          |     |     ||    |     ||    |     ||    |\n' +
+            '     ||____  ____|     | ____||____|     ||____| ____||____|\n';
         const CHANGING_THE_SCALE = [
             [128, {width: 3, height: 2}, LCD_128_WIDTH_3_HEIGHT_2],
             [281, {width: 3, height: 2}, LCD_281_WIDTH_3_HEIGHT_2],
             [1234567890, {width: 3, height: 2}, LCD_1234567890_WIDTH_3_HEIGHT_2],
+            [1234567890, {width: 4, height: 3}, LCD_1234567890_WIDTH_4_HEIGHT_3],
         ];
         test.each(CHANGING_THE_SCALE)('example: %i (%s)',
             (number, scale, expectedOutput) => {

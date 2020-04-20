@@ -149,6 +149,109 @@ const LCD_DIGITS_WIDTH_3_HEIGHT_2 = [
     NINE_WIDTH_3_HEIGHT_2,
 ];
 
+const ZERO_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '|    |',
+    '|    |',
+    '|    |',
+    '|    |',
+    '|    |',
+    '|____|',
+];
+const ONE_WIDTH_4_HEIGHT_3 = [
+    '      ',
+    '     |',
+    '     |',
+    '     |',
+    '     |',
+    '     |',
+    '     |',
+];
+const TWO_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '     |',
+    '     |',
+    ' ____|',
+    '|     ',
+    '|     ',
+    '|____ ',
+];
+const THREE_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '     |',
+    '     |',
+    ' ____|',
+    '     |',
+    '     |',
+    ' ____|',
+];
+const FOUR_WIDTH_4_HEIGHT_3 = [
+    '      ',
+    '|    |',
+    '|    |',
+    '|____|',
+    '     |',
+    '     |',
+    '     |',
+];
+const FIVE_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '|     ',
+    '|     ',
+    '|____ ',
+    '     |',
+    '     |',
+    ' ____|',
+];
+const SIX_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '|     ',
+    '|     ',
+    '|____ ',
+    '|    |',
+    '|    |',
+    '|____|',
+];
+const SEVEN_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '     |',
+    '     |',
+    '     |',
+    '     |',
+    '     |',
+    '     |',
+];
+const EIGHT_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '|    |',
+    '|    |',
+    '|____|',
+    '|    |',
+    '|    |',
+    '|____|',
+];
+const NINE_WIDTH_4_HEIGHT_3 = [
+    ' ____ ',
+    '|    |',
+    '|    |',
+    '|____|',
+    '     |',
+    '     |',
+    ' ____|',
+];
+const LCD_DIGITS_WIDTH_4_HEIGHT_3 = [
+    ZERO_WIDTH_4_HEIGHT_3,
+    ONE_WIDTH_4_HEIGHT_3,
+    TWO_WIDTH_4_HEIGHT_3,
+    THREE_WIDTH_4_HEIGHT_3,
+    FOUR_WIDTH_4_HEIGHT_3,
+    FIVE_WIDTH_4_HEIGHT_3,
+    SIX_WIDTH_4_HEIGHT_3,
+    SEVEN_WIDTH_4_HEIGHT_3,
+    EIGHT_WIDTH_4_HEIGHT_3,
+    NINE_WIDTH_4_HEIGHT_3,
+];
+
 function lcdDigits(number, scale) {
     const decimalDigits = String(number).split('').map(Number);
     return decimalDigits.map(decimalDigit => scaledLcdDigit(decimalDigit, scale));
@@ -158,6 +261,9 @@ function scaledLcdDigit(digit, {width, height}) {
     let digits = LCD_DIGITS;
     if (width === 3 && height === 2) {
         digits = LCD_DIGITS_WIDTH_3_HEIGHT_2;
+    }
+    if (width === 4 && height === 3) {
+        digits = LCD_DIGITS_WIDTH_4_HEIGHT_3;
     }
     return digits[digit];
 }
