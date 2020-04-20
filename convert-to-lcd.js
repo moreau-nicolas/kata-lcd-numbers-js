@@ -3,58 +3,6 @@ function convertToLcd(number, scale = {width: 1, height: 1}) {
     return joinDigitLines(digits);
 }
 
-const ZERO = [
-    ' _ ',
-    '| |',
-    '|_|',
-];
-const ONE = [
-    '   ',
-    '  |',
-    '  |',
-];
-const TWO = [
-    ' _ ',
-    ' _|',
-    '|_ ',
-];
-const THREE = [
-    ' _ ',
-    ' _|',
-    ' _|',
-];
-const FOUR = [
-    '   ',
-    '|_|',
-    '  |',
-];
-const FIVE = [
-    ' _ ',
-    '|_ ',
-    ' _|',
-];
-const SIX = [
-    ' _ ',
-    '|_ ',
-    '|_|',
-];
-const SEVEN = [
-    ' _ ',
-    '  |',
-    '  |',
-];
-const EIGHT = [
-    ' _ ',
-    '|_|',
-    '|_|',
-];
-const NINE = [
-    ' _ ',
-    '|_|',
-    ' _|',
-];
-const LCD_DIGITS = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE];
-
 function copy(count, element) {
     return Array(count).fill(element);
 }
@@ -63,6 +11,16 @@ function lcdDigits(number, scale) {
     const decimalDigits = String(number).split('').map(Number);
     return decimalDigits.map(decimalDigit => scaledLcdDigit(decimalDigit, scale));
 }
+
+function transpose(matrix) {
+    return matrix[0].map((_, column) => matrix.map(row => row[column]));
+}
+
+const LCD_DIGITS = transpose([
+    [' _ ', '   ', ' _ ', ' _ ', '   ', ' _ ', ' _ ', ' _ ', ' _ ', ' _ '],
+    ['| |', '  |', ' _|', ' _|', '|_|', '|_ ', '|_ ', '  |', '|_|', '|_|'],
+    ['|_|', '  |', '|_ ', ' _|', '  |', ' _|', '|_|', '  |', '|_|', ' _|'],
+]);
 
 function scaledLcdDigit(decimalDigit, {width, height}) {
     const EMPTY = ' ';
