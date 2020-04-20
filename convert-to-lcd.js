@@ -59,43 +59,24 @@ function copy(count, element) {
     return Array(count).fill(element);
 }
 
-const LCD_DIGITS_WIDTH_3_HEIGHT_2 = LCD_DIGITS.map(digit => [
-    digit[0][0] + digit[0][1].repeat(3) + digit[0][2],
-    ...copy(1,
-        digit[1][0] + ' '.repeat(3) + digit[1][2],
-    ),
-    digit[1][0] + digit[1][1].repeat(3) + digit[1][2],
-    ...copy(1,
-        digit[2][0] + ' '.repeat(3) + digit[2][2],
-    ),
-    digit[2][0] + digit[2][1].repeat(3) + digit[2][2],
-]);
-const LCD_DIGITS_WIDTH_4_HEIGHT_3 = LCD_DIGITS.map(digit => [
-    digit[0][0] + digit[0][1].repeat(4) + digit[0][2],
-    ...copy(2,
-        digit[1][0] + ' '.repeat(4) + digit[1][2],
-    ),
-    digit[1][0] + digit[1][1].repeat(4) + digit[1][2],
-    ...copy(2,
-        digit[2][0] + ' '.repeat(4) + digit[2][2],
-    ),
-    digit[2][0] + digit[2][1].repeat(4) + digit[2][2],
-]);
-
 function lcdDigits(number, scale) {
     const decimalDigits = String(number).split('').map(Number);
     return decimalDigits.map(decimalDigit => scaledLcdDigit(decimalDigit, scale));
 }
 
-function scaledLcdDigit(digit, {width, height}) {
-    let digits = LCD_DIGITS;
-    if (width === 3 && height === 2) {
-        digits = LCD_DIGITS_WIDTH_3_HEIGHT_2;
-    }
-    if (width === 4 && height === 3) {
-        digits = LCD_DIGITS_WIDTH_4_HEIGHT_3;
-    }
-    return digits[digit];
+function scaledLcdDigit(decimalDigit, {width, height}) {
+    const lcdDigit = LCD_DIGITS[decimalDigit];
+    return [
+        lcdDigit[0][0] + lcdDigit[0][1].repeat(width) + lcdDigit[0][2],
+        ...copy(height - 1,
+            lcdDigit[1][0] + ' '.repeat(width) + lcdDigit[1][2],
+        ),
+        lcdDigit[1][0] + lcdDigit[1][1].repeat(width) + lcdDigit[1][2],
+        ...copy(height - 1,
+            lcdDigit[2][0] + ' '.repeat(width) + lcdDigit[2][2],
+        ),
+        lcdDigit[2][0] + lcdDigit[2][1].repeat(width) + lcdDigit[2][2],
+    ];
 }
 
 function joinDigitLines(digits) {
