@@ -1,28 +1,10 @@
 function convertToLcd(number, scale = {width: 1, height: 1}) {
-    const digits = lcdDigits(number, scale);
-    return joinDigitLines(digits);
-}
-
-function copy(count, element) {
-    return Array(count).fill(element);
-}
-
-function lcdDigits(number, scale) {
     const decimalDigits = String(number).split('').map(Number);
-    return decimalDigits.map(decimalDigit => scaledLcdDigit(decimalDigit, scale));
+    const lcdDigits = decimalDigits.map(decimalDigit => lcdDigit(decimalDigit, scale));
+    return lcdNumber(lcdDigits);
 }
 
-function transpose(matrix) {
-    return matrix[0].map((_, column) => matrix.map(row => row[column]));
-}
-
-const LCD_DIGITS = transpose([
-    [' _ ', '   ', ' _ ', ' _ ', '   ', ' _ ', ' _ ', ' _ ', ' _ ', ' _ '],
-    ['| |', '  |', ' _|', ' _|', '|_|', '|_ ', '|_ ', '  |', '|_|', '|_|'],
-    ['|_|', '  |', '|_ ', ' _|', '  |', ' _|', '|_|', '  |', '|_|', ' _|'],
-]);
-
-function scaledLcdDigit(decimalDigit, {width, height}) {
+function lcdDigit(decimalDigit, {width, height}) {
     const EMPTY = ' ';
     const [
         [TOP_LEFT, TOP, TOP_RIGHT],
@@ -42,13 +24,25 @@ function scaledLcdDigit(decimalDigit, {width, height}) {
     ];
 }
 
-function joinDigitLines(digits) {
-    const concatLines = (a, b) =>
-        a.map((accumulator, index) => accumulator + b[index]);
-    const lines = digits.reduce(concatLines);
-    return lines.join('\n') + '\n';
+const LCD_DIGITS = transpose([
+    [' _ ', '   ', ' _ ', ' _ ', '   ', ' _ ', ' _ ', ' _ ', ' _ ', ' _ '],
+    ['| |', '  |', ' _|', ' _|', '|_|', '|_ ', '|_ ', '  |', '|_|', '|_|'],
+    ['|_|', '  |', '|_ ', ' _|', '  |', ' _|', '|_|', '  |', '|_|', ' _|'],
+]);
+
+function lcdNumber(lcdDigits) {
+    const concatenate = (lines, digit) => lines.map((line, index) => line + digit[index]);
+    return lcdDigits.reduce(concatenate).join('\n') + '\n';
 }
 
 module.exports = {
     convertToLcd,
+}
+
+function copy(count, element) {
+    return Array(count).fill(element);
+}
+
+function transpose(matrix) {
+    return matrix[0].map((_, column) => matrix.map(row => row[column]));
 }
